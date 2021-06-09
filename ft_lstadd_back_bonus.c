@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:30:21 by msantos-          #+#    #+#             */
-/*   Updated: 2021/04/12 19:37:27 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:13:55 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *lastnode;
+	t_list	*lastnode;
 
 	if (new)
 	{

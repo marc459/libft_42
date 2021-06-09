@@ -6,17 +6,17 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:54:35 by msantos-          #+#    #+#             */
-/*   Updated: 2019/11/26 17:08:57 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:55:42 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		wordcount(char const *s, char c)
+int	wordcount(char const *s, char c)
 {
-	int i;
-	int x;
-	int slen;
+	int	i;
+	int	x;
+	int	slen;
 
 	i = 0;
 	i = 0;
@@ -35,10 +35,10 @@ int		wordcount(char const *s, char c)
 	return (x);
 }
 
-int		checkblanks(char const *s, char c)
+int	checkblanks(char const *s, char c)
 {
-	int i;
-	int blanks;
+	int	i;
+	int	blanks;
 
 	i = 0;
 	blanks = 1;
@@ -53,9 +53,9 @@ int		checkblanks(char const *s, char c)
 
 char	**create_bidimensional(char *s, char **str, char c, size_t i)
 {
-	size_t y;
-	size_t x;
-	size_t z;
+	size_t	y;
+	size_t	x;
+	size_t	z;
 
 	y = -1;
 	x = 0;
@@ -89,11 +89,12 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (checkblanks(s, c) == 1 || s[0] == '\0')
 	{
-		str = ft_calloc(sizeof(char*), 1);
+		str = ft_calloc(sizeof(char *), 1);
 		return (str);
 	}
 	x = wordcount(s, c);
-	if (!(str = (char **)ft_calloc(sizeof(char *), (x + 1))))
+	str = (char **)ft_calloc(sizeof(char *), (x + 1));
+	if (!str)
 		return (NULL);
 	str[x] = NULL;
 	while (s[i] == c)

@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:28:38 by msantos-          #+#    #+#             */
-/*   Updated: 2019/12/11 14:28:44 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:14:11 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < (ft_lstsize(lst) - 1))

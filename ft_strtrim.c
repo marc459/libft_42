@@ -6,18 +6,18 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 16:06:00 by msantos-          #+#    #+#             */
-/*   Updated: 2019/11/23 20:09:24 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:57:03 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		beginning(char const *s1, char const *set)
+int	beginning(char const *s1, char const *set)
 {
-	int i;
-	int j;
-	int cont1;
-	int setnb;
+	int	i;
+	int	j;
+	int	cont1;
+	int	setnb;
 
 	setnb = 1;
 	i = 0;
@@ -41,12 +41,12 @@ int		beginning(char const *s1, char const *set)
 	return (cont1);
 }
 
-int		final(char const *s1, char const *set)
+int	final(char const *s1, char const *set)
 {
-	int i;
-	int j;
-	int cont2;
-	int setnb;
+	int	i;
+	int	j;
+	int	cont2;
+	int	setnb;
 
 	setnb = 1;
 	i = ft_strlen(s1) - 1;
@@ -80,8 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	if (!s1)
 		return (NULL);
-	start = beginning(s1, set)
-	;
+	start = beginning(s1, set);
 	if (start > (ft_strlen(s1) - final(s1, set)))
 		return (ft_strdup(""));
 	slen = ft_strlen(s1) - final(s1, set) - beginning(s1, set);

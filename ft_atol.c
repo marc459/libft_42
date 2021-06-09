@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 14:08:23 by marcos            #+#    #+#             */
-/*   Updated: 2021/04/20 14:08:31 by marcos           ###   ########.fr       */
+/*   Updated: 2021/06/06 21:38:06 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-long		ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	unsigned int	i;
 	int				minus;
@@ -23,7 +22,7 @@ long		ft_atol(const char *str)
 	minus = 0;
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\f'
-	|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
+		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 		i++;
 	if (str[i] == '-')
 		minus++;

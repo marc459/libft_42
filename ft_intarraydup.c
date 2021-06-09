@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 10:27:40 by msantos-          #+#    #+#             */
-/*   Updated: 2021/05/28 11:43:33 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 16:54:32 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 int	*ft_intarraydup(int *n1)
 {
-	int		i;
+	int	i;
 	int	*ret;
 
 	i = ft_len((long)n1);
 	if (!i)
 		return (ret);
-	if (!(ret = (int *)malloc(sizeof(int) * i)))
+	ret = (int *)malloc(sizeof(int) * i);
+	if (!ret)
 		return (NULL);
-   	ft_memcpy(ret, n1, i);
+	ft_memcpy(ret, n1, i);
 	return (ret);
 }

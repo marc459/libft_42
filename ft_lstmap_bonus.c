@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:34:00 by msantos-          #+#    #+#             */
-/*   Updated: 2019/12/11 14:40:13 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:14:35 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *mapped;
-	t_list *tmp;
+	t_list	*mapped;
+	t_list	*tmp;
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
 	mapped = NULL;
 	while (lst != NULL)
 	{
-		if ((tmp = ft_lstnew((*f)(lst->content))) == NULL)
+		tmp = ft_lstnew((*f)(lst->content));
+		if (tmp == NULL)
 		{
 			ft_lstclear(&mapped, del);
 			return (NULL);

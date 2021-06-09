@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 17:52:10 by msantos-          #+#    #+#             */
-/*   Updated: 2020/02/23 23:15:04 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:10:13 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_itoa_without_minus(long int n)
 	i = ft_intlen(nb);
 	if (n == 0)
 		return (ft_strdup("0"));
-	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!str)
 		return (NULL);
 	if (nb == 0)
 		return (str);

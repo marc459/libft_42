@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:58:47 by msantos-          #+#    #+#             */
-/*   Updated: 2019/11/18 19:26:09 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:18:19 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *src, int c)
 {
-	if (ft_strchr((char*)src, (int)c) == NULL)
+	if (ft_strchr((char *)src, (int)c) == NULL)
 		return (NULL);
 	while (*src != '\0')
 		src++;

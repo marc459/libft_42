@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 13:55:11 by msantos-          #+#    #+#             */
-/*   Updated: 2020/11/04 14:09:59 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:32:30 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ char	*ft_dectohex(long long num)
 	while (num > 0)
 	{
 		rem = num % 16;
-		hex[i] = rem < 10 ? (char)rem + 48 : (char)rem + 55;
+		if (rem < 10)
+			hex[i] = (char)rem + 48;
+		else
+			hex[i] = (char)rem + 55;
 		num /= 16;
 		i++;
 	}

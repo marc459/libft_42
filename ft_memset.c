@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 19:45:10 by msantos-          #+#    #+#             */
-/*   Updated: 2019/12/11 14:11:39 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:15:26 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		charptr[i] = c;
 		i++;
 	}
-	return ((char*)charptr);
+	return ((char *)charptr);
 }
