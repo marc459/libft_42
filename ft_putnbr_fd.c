@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 16:50:50 by msantos-          #+#    #+#             */
-/*   Updated: 2021/06/09 18:02:43 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 21:23:54 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	ft_putnbr_fd(int nb, int fd)
 	}
 	else
 		nr = nb;
-	temp = nr;
-	temp /= 10;
+	temp = nr / 10;
 	while (temp > 0)
 	{
 		size *= 10;
+		temp /= 10;
 	}
 	temp = nr;
 	while (size)
