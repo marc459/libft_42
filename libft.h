@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/06/09 17:20:29 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 20:01:59 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ int				ft_hextodec(char *hexval);
 char			*ft_dectohex(long long num);
 void			ft_putstr(char *s);
 long			ft_atol(const char *str);
-int				*ft_bubble_sort(int *messy_nums,int n);
+int				*ft_bubble_sort(int *messy_nums, int n);
 int				ft_bidstrlen(char **arr);
 int				*ft_intarraydup(int *n1);
+void			*ft_intcpy(int *dst, int *src, size_t n);
 
 #endif

@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bubblesort.c                                    :+:      :+:    :+:   */
+/*   ft_intcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 15:02:15 by msantos-          #+#    #+#             */
-/*   Updated: 2021/06/10 20:10:50 by msantos-         ###   ########.fr       */
+/*   Created: 2021/06/10 20:01:27 by msantos-          #+#    #+#             */
+/*   Updated: 2021/06/10 20:11:22 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	*ft_bubble_sort(int *messy_nums, int length)
+void	*ft_intcpy(int *dst, int *src, size_t n)
 {
-	int	c;
-	int	d;
-	int	swap;
-	int	*ret;
+	size_t	i;
+	int		*src_c;
+	int		*dst_c;
 
-	c = 0;
-	d = 0;
-	ret = (int *)malloc(sizeof(int) * length);
-	ret = ft_intcpy(ret, messy_nums, length);
-	while (c < length - 1)
+	src_c = src;
+	dst_c = dst;
+	i = 0;
+	if (!n || dst == src)
+		return (dst);
+	while (i < n)
 	{
-		while (d < length - c - 1)
-		{
-			if (ret[d] > ret[d + 1])
-			{
-				swap = ret[d];
-				ret[d] = ret[d + 1];
-				ret[d + 1] = swap;
-			}
-			d++;
-		}
-		c++;
-		d = 0;
+		dst_c[i] = src_c[i];
+		i++;
 	}
-	return (ret);
+	return (dst);
 }

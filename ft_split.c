@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:54:35 by msantos-          #+#    #+#             */
-/*   Updated: 2021/06/09 17:55:42 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/06/10 18:51:12 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	checkblanks(char const *s, char c)
 	return (blanks);
 }
 
-char	**create_bidimensional(char *s, char **str, char c, size_t i)
+char	**create_bidimensional(const char *s, char **str, char c, size_t i)
 {
 	size_t	y;
 	size_t	x;
@@ -99,5 +99,5 @@ char	**ft_split(char const *s, char c)
 	str[x] = NULL;
 	while (s[i] == c)
 		i++;
-	return (create_bidimensional(ft_strdup(s), str, c, i));
+	return (create_bidimensional(s, str, c, i));
 }
