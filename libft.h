@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/06/10 20:01:59 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/07/07 19:31:15 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,6 @@ int				*ft_bubble_sort(int *messy_nums, int n);
 int				ft_bidstrlen(char **arr);
 int				*ft_intarraydup(int *n1);
 void			*ft_intcpy(int *dst, int *src, size_t n);
+int				free_return(char *str,int ret);
 
 #endif
