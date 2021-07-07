@@ -6,13 +6,13 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 19:30:33 by msantos-          #+#    #+#             */
-/*   Updated: 2021/07/07 19:38:36 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/07/07 19:42:33 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_free_return(char *str, int ret)
+int	ft_free_return(void *str, int ret)
 {
 	free(str);
 	return (ret);
