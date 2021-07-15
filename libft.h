@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/07/07 19:42:42 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/07/15 15:57:18 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ int				ft_bidstrlen(char **arr);
 int				*ft_intarraydup(int *n1);
 void			*ft_intcpy(int *dst, int *src, size_t n);
 int				ft_free_return(void *str, int ret);
+int				ft_bintodec(long long n);
 
 #endif
