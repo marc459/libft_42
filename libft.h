@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/07/15 15:57:18 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/10/29 23:19:42 by marcos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,7 @@ int				*ft_intarraydup(int *n1);
 void			*ft_intcpy(int *dst, int *src, size_t n);
 int				ft_free_return(void *str, int ret);
 int				ft_bintodec(long long n);
+int				get_next_line(char **line);
+char			*ft_strjoinchar(char *s, char c);
 
 #endif
