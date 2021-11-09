@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcos <marcos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/10/29 23:19:42 by marcos           ###   ########.fr       */
+/*   Updated: 2021/11/09 18:31:13 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int				ft_free_return(void *str, int ret);
 int				ft_bintodec(long long n);
 int				get_next_line(char **line);
 char			*ft_strjoinchar(char *s, char c);
+void			ft_freebidstr(char **s);
 
 #endif
