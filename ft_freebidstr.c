@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:29:46 by msantos-          #+#    #+#             */
-/*   Updated: 2021/11/09 18:30:54 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/11/09 19:56:12 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_freebidstr(char **s)
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i] != NULL)
 	{
 		free(s[i]);
 		i++;
