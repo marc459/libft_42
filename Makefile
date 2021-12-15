@@ -1,5 +1,13 @@
 NAME =  libft.a
 
+FT_PRINTF_SRCS_PATH = ./ft_printf
+
+FT_PRINTF_SRCS = flag_sorting.c ft_printf.c initialize_flags.c \
+print_integer.c print_string.c variable_sorting.c ft_putstrcounter.c \
+print_character.c print_hexadecimal.c print_ptr.c print_percentage.c \
+print_unsigned.c print_charxtimes.c \
+check_width.c check_precision.c check_zero.c
+
 SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 ft_memcmp.c ft_strlen.c ft_strlcat.c ft_strlcpy.c ft_strchr.c \
 ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
@@ -21,14 +29,20 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -I
 
 OBJ = $(SRC:.c=.o)
-
 BOBJ = $(BONUS:.c=.o)
+PRINTFOBJS = $(FT_PRINTF_SRCS:.c=.o)
+
+FT_PRINTF_OBJS = $(addprefix $(FT_PRINTF_SRCS_PATH)/, $(PRINTFOBJS))
 
 all: $(NAME)
-$(NAME):$(SRCS) libft.h
-	@gcc -c $(SRC)
-	@ar rc $(NAME) $(OBJ)
+
+$(NAME):$(FT_PRINTF_OBJS)
+	@gcc -c $(SRC) 
+	@ar rc $(NAME) $(OBJ) $(FT_PRINTF_OBJS)
 	@ranlib $(NAME)
+
+$(FT_PRINTF_SRCS_PATH)/%.o: $(FT_PRINTF_SRCS_PATH)/%.c
+	@gcc $(CFLAGS) -o $@ -c $<
 
 bonus:
 	@gcc $(CFLAGS) -g -c $(BONUS) $(SRC)

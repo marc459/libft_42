@@ -6,7 +6,7 @@
 /*   By: msantos- <msantos-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 14:49:52 by msantos-          #+#    #+#             */
-/*   Updated: 2021/11/09 18:31:13 by msantos-         ###   ########.fr       */
+/*   Updated: 2021/12/15 17:30:07 by msantos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <strings.h>
+# include "ft_printf/printf.h"
 
 typedef struct s_list
 {
